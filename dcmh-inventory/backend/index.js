@@ -1,9 +1,31 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const Inventory = require('./models/inventory.model.js')
 const app = express()
+
+//Used the line below to allow express to take in JSON data
+app.use(express.json())
 
 app.get('/', (req, res) => {
   res.send('Hello from node API')
+})
+
+app.post('/api/inventory', async (req, res) => {
+  try {
+    const item = await Inventory.create(req.body)
+    res.status(200).json(item)
+  } catch (error) {
+    res.status(500).json({message: error.message})
+  }
+})
+
+app.get('/api/inventory', async (req, res) => {
+  try {
+    const items = await Inventory.find({})
+    res.status(200).json(items)
+  } catch (error) {
+    res.status(500).json({message: error.message})
+  }
 })
 
 
