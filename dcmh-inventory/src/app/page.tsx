@@ -42,7 +42,7 @@ export default function Home({params}: any) {
                   <span className="text-2xl font-bold text-left w-96">{item.name}</span>
                   <div className="h-4 w-4 bg-red-500 rounded-full ml-4"></div>
                   <span className="text-lg font-semibold text-red-600 ml-2 mr-10">Low-stock</span>
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  <button className="text-black font-bold border-2 py-2 px-4 rounded">
                     <a href="https://daviscommunitymeals.org/donate/#:~:text=Contact%20our%20administrative%20office%20to,(530)%20756%2D4008.">
                       Donate
                     </a>
@@ -51,6 +51,27 @@ export default function Home({params}: any) {
                 </div>
               </div>
               ))}
+
+              <div className="border border-gray-400 bg-white border-2 rounded-md p-4 flex flex-col items-center justify-between mt-4 max-w-[1000px]">
+                <div className="flex items-center">
+                  <span className="text-lg font-semibold">Get notified when we’re low stock</span>
+                </div>
+                <div className="mt-4 flex items-center">
+                  <input
+                    type="email"
+                    className="border border-gray-400 rounded-md px-2 py-1 mr-2 focus:outline-none"
+                    placeholder="Your email"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+
+
             </div>
 
 </div>)}
