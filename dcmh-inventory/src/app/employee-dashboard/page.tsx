@@ -65,10 +65,24 @@ export default function Home() {
           </div>
           <div className="absolute top-14 left-4 flex">
               <input type="text" className="bg-white rounded-lg border-2 border-gray-300 w-[230px] h-[35px]" placeholder="Search"></input>
-              <button className="bg-white rounded-lg border-2 border-gray-300 w-[60px] h-[35px] ml-96"></button>
+              <button className="bg-white rounded-lg border-2 border-gray-300 w-[60px] h-[35px] ml-96">
+                <div className="flex items-center">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_284_72)">
+                  <path d="M6.58347 12.5048C6.58347 11.9486 6.96736 11.5746 7.52397 11.5746H11.5835V7.50862C11.5835 6.9716 11.9578 6.57842 12.4856 6.57842C13.0326 6.57842 13.4069 6.96202 13.4069 7.50862V11.5746H17.4856C18.023 11.5746 18.4069 11.9486 18.4069 12.5048C18.4069 13.0322 18.0134 13.3966 17.4856 13.3966H13.4069V17.4722C13.4069 18.0092 13.0326 18.3928 12.4856 18.3928C11.9578 18.3928 11.5835 17.9996 11.5835 17.4722V13.3966H7.52397C6.97695 13.3966 6.58347 13.0322 6.58347 12.5048Z" fill="#494A52"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_284_72">
+                  <rect width="25" height="25" fill="white"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+                </div>
+                <div className="text-black ml-1">
+                  <p className="font-medium">Add</p>
+                </div>
+              </button>
           </div>
-
-          
         </div>
       </div>
     </main>
