@@ -5,27 +5,21 @@ export default function Home() {
             
             
             <div className = "flex justify-center mt-20"> 
-                <div className = "border border-black border-4 p-4 w-full w-1/4 bg-white">
-                    <div className = "text-black">
-                        <p className = "text-xl font-medium text-left">Username</p>
-                    </div>
-                </div>
+                <input type = "text" className = "border border-black border-1 rounded-md p-4 w-1/4 bg-white" placeholder="Username">
+                </input>
             </div>
 
             <div className = "flex justify-center mt-5">
-                <div className = "border border-black border-4 p-4 w-full w-1/4 bg-white">
-                    <div className = "text-black">
-                        <p className = "text-xl font-medium text-left">Password</p>
-                    </div>
-                </div>
+                <input type="password" className = "border border-black border-1 rounded-md p-4 w-1/4 bg-white" placeholder="Password">
+                </input>
             </div>
 
             <div className = "flex justify-center mt-10">
-                <div className = "p-4 w-full w-1/4 bg-zinc-400">
+                <button className = "p-4 w-1/4 rounded-md bg-zinc-400">
                     <div className = "text-black">
                         <p className = "text-3xl font-medium text-center">Sign-In</p>
                     </div>
-                </div>
+                </button>
             </div>
 
 
