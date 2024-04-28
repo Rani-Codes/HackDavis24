@@ -1,4 +1,5 @@
 import { Navbar } from "../components/Navbar";
+import Link from 'next/link'
 
 export default function Home() {
     return (
@@ -29,12 +30,25 @@ export default function Home() {
                             <input type="password" className="border border-gray-300 border-2 rounded-lg h-[40px] w-[300px] p-4 bg-white" placeholder="Enter your password" />
                         </div>
                     </div>
-
+{/* 
                     <div className="flex justify-center mt-5">
                         <button className="p-4 w-[300px] h-[40px] rounded-lg bg-blue-500 flex items-center justify-center">
                             <p className="text-white text-sm font-small">Sign-In</p>
                         </button>
+                    </div> */}
+
+                    <div className="flex justify-center mt-5">
+                        <button className="p-4 w-[300px] h-[40px] rounded-lg bg-blue-500 flex items-center justify-center">
+                            <Link href="/employee-dashboard">
+                                Sign-In
+                            </Link>
+                        </button>
                     </div>
+    
+
+
+
+
                 </div>
             </div>
         </div>
