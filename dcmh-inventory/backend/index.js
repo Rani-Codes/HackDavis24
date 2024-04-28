@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
   res.send('Hello from node API')
 })
 
+//Add a new item to the inventory
 app.post('/api/inventory', async (req, res) => {
   try {
     const item = await Inventory.create(req.body)
@@ -19,10 +20,23 @@ app.post('/api/inventory', async (req, res) => {
   }
 })
 
+//Get all items in the inventory
 app.get('/api/inventory', async (req, res) => {
   try {
     const items = await Inventory.find({})
     res.status(200).json(items)
+  } catch (error) {
+    res.status(500).json({message: error.message})
+  }
+})
+
+//Get 1 item that's in the inventory, must enter its id
+app.get('/api/inventory/:id', async (req, res) => {
+
+  try {
+    const { id } = req.params
+    const item = await Inventory.findById(id)
+    res.status(200).json(item)
   } catch (error) {
     res.status(500).json({message: error.message})
   }
