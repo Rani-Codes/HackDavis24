@@ -1,8 +1,10 @@
 import Image from "next/image";
+import { Navbar } from "../components/Navbar";
 
 export default function Home() {
   return (
     <main>
+      <Navbar />
       <div className="flex justify-center text-zinc-600 mt-20 mr-[460px]">
         <p className="text-2xl font-semibold">Inventory Summary</p>
       </div>
@@ -10,7 +12,7 @@ export default function Home() {
       <div className="flex justify-center">
         <div className="flex">
           <button className="bg-white rounded-lg border-2 border-gray-300 h-[100px] w-[340px] mt-6 mr-4 flex items-center">
-            <div className="bg-gray-100 rounded-md h-14 w-14 ml-5 flex justify-center items-center">
+            <div className="bg-gray-100 rounded-md h-14 w-14 ml-5 items-center">
               <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_299_419)">
               <path d="M4.80236 20H16.9231C19.014 20 20.136 18.912 20.136 16.8296V5.09136H18.623V16.8891C18.623 17.9856 18.011 18.5805 16.9316 18.5805H4.80236C3.6974 18.5805 3.10242 17.9856 3.10242 16.8891V5.09136H1.59796V16.8296C1.59796 18.9205 2.71993 20 4.80236 20ZM7.19931 10.1657H14.5346C14.9766 10.1657 15.2656 9.86824 15.2656 9.41777V9.08626C15.2656 8.62729 14.9766 8.34678 14.5346 8.34678H7.19931C6.76583 8.34678 6.47683 8.62729 6.47683 9.08626V9.41777C6.47683 9.86824 6.76583 10.1657 7.19931 10.1657ZM1.95495 5.77987H19.779C21.037 5.77987 21.734 4.98086 21.734 3.73991V2.06545C21.734 0.815977 21.037 0.0254974 19.779 0.0254974H1.95495C0.747982 0.0254974 0 0.815977 0 2.06545V3.73991C0 4.98086 0.696981 5.77987 1.95495 5.77987ZM2.30344 4.36038C1.75096 4.36038 1.50446 4.0969 1.50446 3.53589V2.26094C1.50446 1.70846 1.75096 1.44496 2.30344 1.44496H19.439C19.9915 1.44496 20.2295 1.70846 20.2295 2.26094V3.53589C20.2295 4.0969 19.9915 4.36038 19.439 4.36038H2.30344Z" fill="#787878" fill-opacity="0.85"/>
@@ -78,10 +80,45 @@ export default function Home() {
                   </defs>
                   </svg>
                 </div>
-                <div className="text-black ml-1">
+                <div className="text-black ml-1 p-">
                   <p className="font-medium">Add</p>
                 </div>
               </button>
+          </div>
+          <div className="w-full bg-gray-100 flex justify-between mt-28">
+            <p>Item Name</p>
+            <p>Count</p>
+            <p>Status</p>
+            <p>Action</p>
+          </div>
+
+          <div className="w-full-100 flex justify-between my-2 py-2">
+            <p>Toilet Paper</p>
+            <p>200</p>
+            <p>Low-Stock</p>
+            <p>Edit</p>
+          </div>
+
+          <div className="w-full-100 flex justify-between my-2">
+            <p>Water Paper</p>
+            <p>15</p>
+            <p>Mid-Stock</p>
+            <p>Edit</p>
+          </div>
+
+          <div className="w-full-100 flex justify-between my-2">
+            <p>Paper plates</p>
+            <p>90</p>
+            <p>Stocked</p>
+            <p>Edit</p>
+          </div>
+
+
+          <div className="w-full-100 flex justify-between my-2">
+            <p>Juice Boxes</p>
+            <p>2</p>
+            <p>Low-Stock</p>
+            <p>Edit</p>
           </div>
         </div>
       </div>
