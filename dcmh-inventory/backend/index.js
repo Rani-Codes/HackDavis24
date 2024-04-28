@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const Inventory = require('./models/inventory.model.js')
+const User = require('./models/user.model.js')
 const app = express()
 
 //Used the line below to allow express to take in JSON data
@@ -41,6 +42,44 @@ app.get('/api/inventory/:id', async (req, res) => {
     res.status(500).json({message: error.message})
   }
 })
+
+
+
+
+
+
+//Add a new item to the inventory
+app.post('/api/user', async (req, res) => {
+  try {
+    const user = await User.create(req.body)
+    res.status(200).json(user)
+  } catch (error) {
+    res.status(500).json({message: error.message})
+  }
+})
+
+//Get all items in the inventory
+app.get('/api/user', async (req, res) => {
+  try {
+    const users = await User.find({})
+    res.status(200).json(users)
+  } catch (error) {
+    res.status(500).json({message: error.message})
+  }
+})
+
+//Get 1 item that's in the inventory, must enter its id
+app.get('/api/user/:id', async (req, res) => {
+
+  try {
+    const { id } = req.params
+    const user = await User.findById(id)
+    res.status(200).json(user)
+  } catch (error) {
+    res.status(500).json({message: error.message})
+  }
+})
+
 
 
 mongoose.connect('mongodb+srv://Rani:Ku8Z8FsMF5dgCVwv@hackdavis24.xywjix4.mongodb.net/')
