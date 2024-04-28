@@ -36,7 +36,7 @@ export default function Home({params}: any) {
       <div className="flex flex-col items-center"> {/* Centering all children */}
               <h1 className="text-6xl font-bold text-center mt-20 ">Hi we need:</h1>
               {items && items.map((item: InventoryItem) => (
-              <div className="border border-gray-400 bg-white border-2 rounded-md p-4 h-20 flex items-center justify-between mt-20 mb-4 max-w-[1000px]"> {/* Centering this div */}
+              <div className="border border-gray-400 bg-white border-1 rounded-md p-4 h-20 flex items-center justify-between mt-20 mb-4 max-w-[1000px]"> {/* Centering this div */}
                 <div className="ml-4 flex items-center">
                   <span className="text-2xl font-bold pr-4">{item.goalAmount}</span>
                   <span className="text-2xl font-bold text-left w-96">{item.name}</span>
@@ -52,15 +52,15 @@ export default function Home({params}: any) {
               </div>
               ))}
 
-              <div className="border border-gray-400 bg-white border-2 rounded-md p-4 flex flex-col items-center justify-between mt-4 max-w-[1000px]">
+              <div className="border border-gray-400 bg-white border-1 rounded-md p-4 flex flex-col items-center justify-between mt-4 max-w-[1000px]">
                 <div className="flex items-center">
                   <span className="text-lg font-semibold">Get notified when we’re low stock</span>
                 </div>
                 <div className="mt-4 flex items-center">
                   <input
-                    type="email"
+                    type="phone"
                     className="border border-gray-400 rounded-md px-2 py-1 mr-2 focus:outline-none"
-                    placeholder="Your email"
+                    placeholder="Your phone number"
                   />
                   <button
                     type="submit"
