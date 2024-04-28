@@ -5,29 +5,21 @@ export default function Home() {
   return (
     <div className="text-black">
       <Navbar/>
-      <h1 className="text-6xl font-medium text-center mt-40 ">Hi we need:</h1>
-      
-      <div className="mt-20 mx-28 bg-gray-300 ">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-              <span className="text-lg font-bold">10</span>
-          </div>
-
-          <div className="flex items-center ml-4">
-              <span className="text-lg">Paper Towels</span>
-          </div>
-
-          <div className="flex items-center ml-4">
-              <div className="h-8 w-8 bg-green-500 rounded-full"></div>
-          </div>
-
-          <div className="flex items-center ml-4">
-              <span className="text-lg font-semibold text-red-600">High Priority</span>
+      <div className="flex flex-col items-center"> {/* Centering all children */}
+        <h1 className="text-6xl font-bold text-center mt-20 ">Hi we need:</h1>
+        
+        <div className="border border-gray-400 bg-white border-2 rounded-md p-4 h-20 flex items-center justify-between mt-20 mb-4 max-w-[1000px]"> {/* Centering this div */}
+          <div className="ml-4 flex items-center">
+            <span className="text-2xl font-bold pr-4">10</span>
+            <span className="text-2xl font-bold text-left w-96">Paper Towels</span>
+            <div className="h-4 w-4 bg-red-500 rounded-full ml-4"></div>
+            <span className="text-lg font-semibold text-red-600 ml-2 mr-10">Low-stock</span>
           </div>
         </div>
       </div>
-
-
     </div>
+    
+
+
   );
 }
