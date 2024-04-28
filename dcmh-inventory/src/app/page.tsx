@@ -42,6 +42,12 @@ export default function Home({params}: any) {
                   <span className="text-2xl font-bold text-left w-96">{item.name}</span>
                   <div className="h-4 w-4 bg-red-500 rounded-full ml-4"></div>
                   <span className="text-lg font-semibold text-red-600 ml-2 mr-10">Low-stock</span>
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <a href="https://daviscommunitymeals.org/donate/#:~:text=Contact%20our%20administrative%20office%20to,(530)%20756%2D4008.">
+                      Donate
+                    </a>
+                  </button>
+
                 </div>
               </div>
               ))}
