@@ -21,6 +21,25 @@ app.post('/api/inventory', async (req, res) => {
   }
 })
 
+//Update an item that's in the inventory, must enter its id
+app.put('/api/inventory/:id', async (req, res) => {
+
+  try {
+    const { id } = req.params
+    const item = await Inventory.findByIdAndUpdate(id, req.body)
+
+    if(!item) {
+      return res.status(404).json({message: "Item not found"})
+    }
+
+    const updatedItem = await Inventory.findById(id)
+    res.status(200).json(updatedItem)
+
+  } catch (error) {
+    res.status(500).json({message: error.message})
+  }
+})
+
 //Get all items in the inventory
 app.get('/api/inventory', async (req, res) => {
   try {
@@ -48,7 +67,7 @@ app.get('/api/inventory/:id', async (req, res) => {
 
 
 
-//Add a new item to the inventory
+//Add a new user
 app.post('/api/user', async (req, res) => {
   try {
     const user = await User.create(req.body)
@@ -58,7 +77,7 @@ app.post('/api/user', async (req, res) => {
   }
 })
 
-//Get all items in the inventory
+//Get all users in the db
 app.get('/api/user', async (req, res) => {
   try {
     const users = await User.find({})
@@ -68,7 +87,7 @@ app.get('/api/user', async (req, res) => {
   }
 })
 
-//Get 1 item that's in the inventory, must enter its id
+//Get 1 user that's in the db, using its' unique id
 app.get('/api/user/:id', async (req, res) => {
 
   try {
