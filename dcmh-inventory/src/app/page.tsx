@@ -1,8 +1,10 @@
 import Image from "next/image";
+import { Navbar } from "./components/Navbar";
 
 export default function Home() {
   return (
     <div className="text-black">
+      <Navbar/>
       <h1 className="text-6xl font-medium text-center mt-40 ">Hi we need:</h1>
       
       <div className="mt-20 mx-28 bg-gray-300 ">
