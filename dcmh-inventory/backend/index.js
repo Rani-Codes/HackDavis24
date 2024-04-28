@@ -5,18 +5,21 @@ const User = require('./models/user.model.js')
 const app = express()
 const inventoryRoute = require('./routes/inventory.js')
 const userRoute = require('./routes/user.js')
+const cors = require('cors')
 
 
-//Used the line below to allow express to take in JSON data
+//Middleware
 app.use(express.json())
+app.use(cors())
 
+
+//Routes
 app.get('/', (req, res) => {
   res.send('Hello from node API')
 })
-
 app.use('/api/inventory', inventoryRoute)
-
 app.use('/api/user', userRoute)
+
 
 mongoose.connect('mongodb+srv://Rani:Ku8Z8FsMF5dgCVwv@hackdavis24.xywjix4.mongodb.net/')
   .then(() => {
